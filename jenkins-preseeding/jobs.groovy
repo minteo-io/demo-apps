@@ -1,6 +1,6 @@
 // scripts/jobs.groovy
 
-job('example-freestyle-job') {
+job('Prod-freestyle-job') {
     description('This is an example Freestyle job created by the Job DSL plugin.')
     scm {
         git('https://github.com/your-repo.git', 'main')
@@ -16,7 +16,7 @@ job('example-freestyle-job') {
     }
 }
 
-pipelineJob('example-pipeline-job') {
+pipelineJob('Prod-pipeline-job') {
     description('This is an example Pipeline job created by the Job DSL plugin.')
     definition {
         cps {
