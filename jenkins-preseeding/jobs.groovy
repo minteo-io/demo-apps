@@ -3,7 +3,7 @@
 job('Prod-freestyle-job') {
     description('This is an example Freestyle job created by the Job DSL plugin.')
     scm {
-        git('https://github.com/your-repo.git', 'main')
+        git('https://github.com/minteo-io/demo-apps.git', 'main')
     }
     triggers {
         scm('H/5 * * * *')
@@ -12,7 +12,7 @@ job('Prod-freestyle-job') {
         shell('echo "Building the project..."')
     }
     publishers {
-        archiveArtifacts('**/target/*.jar')
+        archiveArtifacts('**/demo/prod/*.jar')
     }
 }
 
