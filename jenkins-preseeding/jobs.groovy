@@ -1,5 +1,5 @@
 String[] services = ['frontend','user','payment','order','notification','inventory'];
-String[] env   = ['Development','Test','Production'];
+String[] env   = ['Menning','Nároyndir','Framleiðsla'];
 
 for(envname in env) {
     for(pipeline in services) {
@@ -9,7 +9,7 @@ for(envname in env) {
 	String envname_lowercased = envname.substring(0,envname.length()).toLowerCase().replace(" ", "-").replace(".", "-");
 	print "Configuring " + envname + " " + pipeline_capitalized + "\n"
 
-        pipelineJob(envname + ' Configure ' + pipeline_capitalized) {
+        pipelineJob(envname + ' ' + pipeline_capitalized) {
             description("Building " + pipeline_capitalized + ' for ' + envname)
             definition {
                 cps {
